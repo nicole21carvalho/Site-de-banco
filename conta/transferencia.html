@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transferência · Banco Tech.In.Fin</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-raiz="../" data-area="cliente" data-pagina="transferencia">
+  <div class="area">
+    <aside data-componente="lateral"></aside>
+
+    <main class="principal" id="conteudo">
+      <header data-componente="barra-topo"></header>
+      <h1 class="titulo-pagina">Transferência</h1>
+
+      <form class="paineis" data-formulario novalidate>
+        <section class="painel" aria-labelledby="titulo-destino">
+          <h2 id="titulo-destino">Qual é a agência e a conta?</h2>
+          <div class="campo">
+            <label for="tipo-conta">Tipo de conta</label>
+            <select id="tipo-conta" name="tipo-conta" required>
+              <option value="">Selecione</option>
+              <option>Conta corrente</option>
+              <option>Conta poupança</option>
+            </select>
+            <span class="erro">Selecione o tipo de conta.</span>
+          </div>
+          <div class="linha-campos">
+            <div class="campo">
+              <label for="agencia">Agência</label>
+              <input id="agencia" name="agencia" inputmode="numeric" placeholder="0000" required pattern="\d{4}" maxlength="4">
+              <span class="erro">A agência tem 4 números.</span>
+            </div>
+            <div class="campo">
+              <label for="conta">Conta com dígito</label>
+              <input id="conta" name="conta" inputmode="numeric" placeholder="00000-0" required pattern="\d{4,12}-\d" data-conta>
+              <span class="erro">Informe a conta com o dígito.</span>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="valor">Valor</label>
+            <input id="valor" name="valor" inputmode="numeric" placeholder="R$ 0,00" required data-moeda data-minimo="0.01">
+            <span class="erro">Informe um valor maior que zero.</span>
+          </div>
+          <fieldset class="campo">
+            <legend>Tipo de transferência</legend>
+            <div class="opcoes">
+              <label class="opcao"><input type="radio" name="tipo-transferencia" value="TED" required> TED · cai no mesmo dia útil</label>
+              <label class="opcao"><input type="radio" name="tipo-transferencia" value="transferência entre contas Tech.In.Fin"> Entre contas Tech.In.Fin · na hora</label>
+            </div>
+            <span class="erro">Escolha o tipo de transferência.</span>
+          </fieldset>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-favorecido">
+          <h2 id="titulo-favorecido">Quem vai receber?</h2>
+          <div class="campo">
+            <label for="cpf">CPF</label>
+            <input id="cpf" name="cpf" inputmode="numeric" placeholder="000.000.000-00" required data-cpf>
+            <span class="erro">Informe um CPF válido.</span>
+          </div>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" required minlength="3">
+            <span class="erro">Informe o nome de quem vai receber.</span>
+          </div>
+          <div class="campo">
+            <label for="instituicao">Instituição</label>
+            <input id="instituicao" name="instituicao" list="bancos" required>
+            <datalist id="bancos">
+              <option value="Banco Tech.In.Fin"></option>
+              <option value="Banco do Brasil"></option>
+              <option value="Caixa Econômica Federal"></option>
+              <option value="Itaú Unibanco"></option>
+              <option value="Bradesco"></option>
+              <option value="Santander"></option>
+              <option value="Nubank"></option>
+            </datalist>
+            <span class="erro">Informe o banco de quem vai receber.</span>
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem <small>(opcional)</small></label>
+            <textarea id="mensagem" name="mensagem" maxlength="140" placeholder="Digite aqui sua mensagem"></textarea>
+          </div>
+          <button class="botao botao--vermelho botao--grande botao--bloco" type="submit">Transferir</button>
+          <p class="aviso aviso--sucesso" role="status" hidden data-sucesso="Transferência de {valor} para {nome} enviada por {tipo-transferencia}."></p>
+        </section>
+      </form>
+    </main>
+  </div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validacao.js"></script>
+  <script src="../js/formularios.js"></script>
+</body>
+</html>

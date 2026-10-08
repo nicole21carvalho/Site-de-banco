@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel · Banco Tech.In.Fin</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-raiz="../" data-area="cliente" data-pagina="painel">
+  <div class="area">
+    <aside data-componente="lateral"></aside>
+
+    <main class="principal" id="conteudo">
+      <header data-componente="barra-topo"></header>
+      <h1 class="titulo-pagina">Painel</h1>
+
+      <div class="paineis">
+        <section class="painel painel--dois-tercos" aria-labelledby="titulo-contas">
+          <h2 id="titulo-contas">
+            Minhas contas
+            <button class="botao-icone" type="button" id="alternar-saldo" aria-pressed="false" aria-label="Ocultar saldos">
+              <i class="bi bi-eye" aria-hidden="true"></i>
+            </button>
+          </h2>
+          <div class="conta">
+            <h3>Conta corrente</h3>
+            <dl class="dados">
+              <div><dt>Saldo disponível</dt><dd data-valor-sensivel>R$ 1.543,21</dd></div>
+              <div><dt>Agência</dt><dd>0001</dd></div>
+              <div><dt>Número</dt><dd>123456-7</dd></div>
+            </dl>
+          </div>
+          <div class="conta">
+            <h3>Conta poupança</h3>
+            <dl class="dados">
+              <div><dt>Saldo disponível</dt><dd data-valor-sensivel>R$ 543,21</dd></div>
+              <div><dt>Agência</dt><dd>0001</dd></div>
+              <div><dt>Número</dt><dd>789012-3</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="painel painel--terco" aria-labelledby="titulo-cartao">
+          <h2 id="titulo-cartao">Cartão de crédito</h2>
+          <div class="cartao-credito" aria-hidden="true">
+            <span class="cartao-credito__chip"></span>
+            <span class="cartao-credito__numero">•••• •••• •••• 6789</span>
+            <span class="cartao-credito__nome">Ana Souza</span>
+          </div>
+          <dl class="dados dados--lista" style="margin-top: 16px;">
+            <div><dt>Limite disponível</dt><dd data-valor-sensivel>R$ 1.000,00</dd></div>
+            <div><dt>Fatura atual</dt><dd data-valor-sensivel>R$ 543,20</dd></div>
+            <div><dt>Vencimento da fatura</dt><dd>20/10/2026</dd></div>
+            <div><dt>Validade do cartão</dt><dd>12/2028</dd></div>
+          </dl>
+          <button class="link-acao" type="button" id="gerar-codigo">
+            Gerar código para compra virtual <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+          <p class="codigo-virtual" id="codigo-virtual" role="status" hidden></p>
+        </section>
+
+        <section class="painel painel--largo" aria-labelledby="titulo-investimentos">
+          <h2 id="titulo-investimentos">
+            Investimentos
+            <span style="text-align: right; font-size: 0.9375rem;">
+              <small style="color: var(--cinza); font-weight: 500;">Saldo atual</small><br>
+              <span data-valor-sensivel>R$ 740,00</span> <span class="positivo">+ R$ 40,35</span>
+            </span>
+          </h2>
+          <div class="grafico-barras" role="img" aria-label="Rendimento mensal dos investimentos de janeiro a dezembro; abril e outubro tiveram rendimento negativo">
+            <div><span style="--valor: 55%"></span><small>J</small></div>
+            <div><span style="--valor: 42%"></span><small>F</small></div>
+            <div><span style="--valor: 66%"></span><small>M</small></div>
+            <div class="negativo"><span style="--valor: 10%"></span><small>A</small></div>
+            <div><span style="--valor: 24%"></span><small>M</small></div>
+            <div><span style="--valor: 42%"></span><small>J</small></div>
+            <div><span style="--valor: 46%"></span><small>J</small></div>
+            <div><span style="--valor: 28%"></span><small>A</small></div>
+            <div><span style="--valor: 82%"></span><small>S</small></div>
+            <div class="negativo"><span style="--valor: 12%"></span><small>O</small></div>
+            <div><span style="--valor: 55%"></span><small>N</small></div>
+            <div><span style="--valor: 28%"></span><small>D</small></div>
+          </div>
+        </section>
+
+        <section class="painel painel--largo" aria-labelledby="titulo-historico">
+          <h2 id="titulo-historico">Histórico de transações</h2>
+          <div class="tabela-rolagem">
+            <table>
+              <thead>
+                <tr><th scope="col">Data</th><th scope="col">Descrição</th><th scope="col">Valor</th><th scope="col">Categoria</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>06/10/2026</td><td>Compra Supermercado ABC</td><td class="valor negativo">− R$ 120,00</td><td><span class="categoria">Alimentação</span></td></tr>
+                <tr><td>06/10/2026</td><td>Posto de Combustível XYZ</td><td class="valor negativo">− R$ 50,00</td><td><span class="categoria">Transporte</span></td></tr>
+                <tr><td>05/10/2026</td><td>Farmácia Drogaria 24h</td><td class="valor negativo">− R$ 80,00</td><td><span class="categoria">Saúde</span></td></tr>
+                <tr><td>04/10/2026</td><td>Restaurante Sabor Caseiro</td><td class="valor negativo">− R$ 75,00</td><td><span class="categoria">Alimentação</span></td></tr>
+                <tr><td>03/10/2026</td><td>Pagamento Conta de Luz</td><td class="valor negativo">− R$ 100,00</td><td><span class="categoria">Moradia</span></td></tr>
+                <tr data-extra hidden><td>02/10/2026</td><td>Pix recebido · Fulano de Tal</td><td class="valor positivo">+ R$ 100,00</td><td><span class="categoria">Pix</span></td></tr>
+                <tr data-extra hidden><td>01/10/2026</td><td>Salário</td><td class="valor positivo">+ R$ 2.500,00</td><td><span class="categoria">Renda</span></td></tr>
+                <tr data-extra hidden><td>30/09/2026</td><td>Pix enviado · Ciclano da Silva</td><td class="valor negativo">− R$ 250,00</td><td><span class="categoria">Pix</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="link-acao" type="button" id="expandir-historico" aria-expanded="false">
+            <i class="bi bi-chevron-down" aria-hidden="true"></i> <span>Expandir histórico</span>
+          </button>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/painel.js"></script>
+</body>
+</html>

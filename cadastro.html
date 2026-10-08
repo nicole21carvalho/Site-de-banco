@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abrir conta · Banco Tech.In.Fin</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="cadastro">
+  <header data-componente="cabecalho"></header>
+
+  <main id="conteudo" class="pagina-formulario">
+    <div class="container">
+      <form class="cartao-formulario" data-formulario data-redirecionar="cadastro-concluido.html" novalidate>
+        <h1>Abra sua conta</h1>
+        <p>Preencha seus dados. Leva menos de 5 minutos e não tem custo.</p>
+
+        <h2><i class="bi bi-person" aria-hidden="true"></i> Dados pessoais</h2>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" autocomplete="name" required minlength="5">
+          <span class="erro">Informe seu nome completo.</span>
+        </div>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="nascimento">Data de nascimento</label>
+            <input id="nascimento" name="nascimento" type="date" autocomplete="bday" required data-maior-idade>
+            <span class="erro">É preciso ter 18 anos ou mais.</span>
+          </div>
+          <div class="campo">
+            <label for="telefone">Telefone <small>(opcional)</small></label>
+            <input id="telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" data-telefone>
+          </div>
+        </div>
+
+        <h2><i class="bi bi-card-text" aria-hidden="true"></i> Documento</h2>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="tipo-documento">Tipo de documento</label>
+            <select id="tipo-documento" name="tipo-documento" required>
+              <option value="cpf">CPF</option>
+              <option value="passaporte">Passaporte</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="documento">Número do documento</label>
+            <input id="documento" name="documento" inputmode="numeric" placeholder="000.000.000-00" required>
+            <span class="erro" id="erro-documento">Informe um CPF válido.</span>
+          </div>
+        </div>
+
+        <h2><i class="bi bi-shield-lock" aria-hidden="true"></i> Acesso</h2>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <span class="erro">Informe um e-mail válido.</span>
+          </div>
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input id="senha" name="senha" type="password" autocomplete="new-password" required data-senha-forte aria-describedby="dica-senha">
+            <small id="dica-senha">Mínimo de 8 caracteres, com letras e números.</small>
+            <span class="erro">A senha precisa de 8 caracteres, com letras e números.</span>
+          </div>
+        </div>
+
+        <h2><i class="bi bi-house" aria-hidden="true"></i> Endereço</h2>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="cep">CEP</label>
+            <input id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" required pattern="\d{5}-\d{3}" data-cep>
+            <small id="status-cep" role="status">Preenchemos o endereço a partir do CEP.</small>
+            <span class="erro">Informe um CEP com 8 números.</span>
+          </div>
+          <div class="campo">
+            <label for="logradouro">Logradouro</label>
+            <input id="logradouro" name="logradouro" autocomplete="address-line1" required>
+            <span class="erro">Informe a rua.</span>
+          </div>
+        </div>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="numero">Número</label>
+            <input id="numero" name="numero" required>
+            <span class="erro">Informe o número.</span>
+          </div>
+          <div class="campo">
+            <label for="complemento">Complemento <small>(opcional)</small></label>
+            <input id="complemento" name="complemento" autocomplete="address-line2">
+          </div>
+          <div class="campo">
+            <label for="bairro">Bairro</label>
+            <input id="bairro" name="bairro" required>
+            <span class="erro">Informe o bairro.</span>
+          </div>
+        </div>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="cidade">Cidade</label>
+            <input id="cidade" name="cidade" autocomplete="address-level2" required>
+            <span class="erro">Informe a cidade.</span>
+          </div>
+          <div class="campo">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" autocomplete="address-level1" required>
+              <option value="">Selecione</option>
+            </select>
+            <span class="erro">Selecione o estado.</span>
+          </div>
+        </div>
+
+        <label class="opcao campo">
+          <input type="checkbox" name="termos" required>
+          <span>Li e aceito os <a href="#">termos de uso</a> e a <a href="#">política de privacidade</a>.</span>
+        </label>
+
+        <button class="botao botao--vermelho botao--grande" type="submit">Enviar cadastro</button>
+        <p class="aviso aviso--info">Protótipo: nenhum dado é enviado. Os dados ficam só no seu navegador.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer data-componente="rodape"></footer>
+  <script src="js/layout.js"></script>
+  <script src="js/validacao.js"></script>
+  <script src="js/formularios.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

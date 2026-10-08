@@ -1,344 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco Tech.In.Fin
-    </title>
-    
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="shortcut icon" href="Group 86.png" type="image/x-icon">
-
-
-    <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-  
-        .b-example-divider {
-          width: 100%;
-          height: 3rem;
-          background-color: rgba(255, 255, 255, 0.1);
-          border: solid rgba(0, 0, 0, .15);
-          border-width: 1px 0;
-          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-  
-        .b-example-vr {
-          flex-shrink: 0;
-          width: 1.5rem;
-          height: 100vh;
-        }
-  
-        .bi {
-          vertical-align: -.125em;
-          fill: currentColor;
-        }
-  
-        .nav-scroller {
-          margin: 0;
-          position: relative;
-          z-index: 2;
-          height: 2.75rem;
-          overflow-y: hidden;
-        }
-  
-        .nav-scroller .nav {
-          display: flex;
-          flex-wrap: nowrap;
-          padding-bottom: 1rem;
-          margin-top: -1px;
-          overflow-x: auto;
-          text-align: center;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
-        }
-  
-        
-  
-        .bd-mode-toggle {
-          z-index: 1500;
-        }
-  
-        .bd-mode-toggle .dropdown-menu .active .bi {
-          display: block;
-        }
-        
-      .img1{
-        width: 1440px;
-
-         height: 760px;
-        margin-top: -25px;
-       margin: auto;
-         
-       
-        }
-      .img4{
-      width:440px ; 
-      height: 1182px ;
-      margin-top:-20px ;
-
-        }
-          .img5{ 
-            width: 1341px;
-
-height: 503px;
-margin-top: -15px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: -24px;}
-
-.container {
-    display: flex;
-    margin-top: -16px;
-    
-}
-
-.container img {
-    width: 40%; 
-    margin-right: 30px;
-    margin-bottom: -24px;
-}
-
-.container .card-group {
-
-    width: 50%; 
-    display: flex;
-    flex-direction: column; 
-margin-top: -24px;
-
-
-}
-
-.container .card {
-    color: #ffffff;
-    height: 20px;
-    padding: 70px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-
-}
-.container .card-group {
-    width: 60%; 
-    display: flex;
-    flex-direction: column; 
-    margin-right: 30px;
-  margin-top: 20px;
-}
-
-.container .card {
- 
-    background-color: #f0f0f0;
-    padding: 40px;
-    margin-bottom: 35px; }
-
-      </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Banco Tech.In.Fin: conta digital, cartão virtual, empréstimos e investimentos. Projeto de estudo.">
+  <title>Banco Tech.In.Fin · Seu banco 100% digital</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
- 
-  <body style="background-color: rgb(0, 0, 0)">  
-<nav class="navbar navbar-expand-md bg-dark mb-6" style="background: linear-gradient(#D9152C, #750534);">
-  <div class="container-fluid">
-    <img src="Group 86.png" alt="Logo do Banco tech.in.fin">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0" >
-        <li class="nav-item" >
-          <a class="nav-link active" style="color: #fff;"   aria-current="page" href="index.html">Página Inicial</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: #fff;" href="Cadastro para os novos clientes.html">Pessoa física</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" style="color: #fff;"  aria-disabled="true">MEI</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: #fff;" href="Pessoa Jurídica.html">Pessoa Jurídica</a>
-      </ul>
+<body data-pagina="inicio">
+  <header data-componente="cabecalho"></header>
 
-      <div class="d-flex gap-2 justify-content-center py-2">
-      <a class="btn btn-lg btn btn-dark" style="background-color: #500374;" href="Página de entrada0.html" role="button">Entrar</a>
-      <a class="btn btn-lg btn btn-dark "style="background-color: #500374;"  href="Pagina de Cadastro.html" role="button">Abrir conta</a>
-    </div>
-
-   
-  </div>
-</nav>
-<div class="img1"><img src="Rectangle 31.png" alt="Imagem de um celular com informações bancárias" ></div>
-<div class="row row-cols-1 row-cols-md-3 g-6">
-  <div class="col">
-    <div class="card border-danger " style="width: 417px ;height: 332px; right: -35px; ">
-      
-      <div class="card-body ">
-        <h5 class="card-title" style="text-align: center; font-size: xx-large;">Empréstimos</h5>
-        <p class="card-text" style="text-align:center;">Realize seus sonhos com facilidade e taxas competitivas.
-          Simule e contrate seu crédito pessoal online em poucos minutos.</p>
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__texto">
+          <span class="etiqueta">Conta digital gratuita</span>
+          <h1>O banco que cabe no seu bolso</h1>
+          <p>Abra sua conta em minutos, pague com Pix, controle seus gastos e invista, tudo pelo celular.</p>
+          <div class="hero__botoes">
+            <a class="botao botao--vermelho botao--grande" href="cadastro.html">Abrir minha conta</a>
+            <a class="botao botao--contorno botao--grande" href="entrar.html">Já sou cliente</a>
+          </div>
+        </div>
       </div>
-    
-    </div>
-  </div>
-  <div class="col">
-    <div class="card border-danger " style="width: 417px ;height: 332px; right: -35px; ">
-      
-      <div class="card-body ">
-        <h5 class="card-title" style="text-align: center; font-size: xx-large;">Carteira Digital</h5>
-        <p class="card-text" style="text-align:center;">Realize seus sonhos com facilidade e taxas competitivas.
-          Simule e contrate seu crédito pessoal online em poucos minutos.</p>
+    </section>
+
+    <section class="secao secao--cinza" aria-labelledby="titulo-produtos">
+      <div class="container">
+        <h2 class="secao__titulo" id="titulo-produtos">Tudo o que você precisa</h2>
+        <p class="secao__subtitulo">Produtos pensados para o dia a dia, para seus planos e para o seu futuro.</p>
+        <div class="grade grade--3">
+          <article class="produto">
+            <span class="produto__icone"><i class="bi bi-cash-coin" aria-hidden="true"></i></span>
+            <h3>Empréstimos</h3>
+            <p>Realize seus sonhos com facilidade e taxas competitivas. Simule e contrate seu crédito pessoal online em poucos minutos.</p>
+          </article>
+          <article class="produto">
+            <span class="produto__icone"><i class="bi bi-wallet2" aria-hidden="true"></i></span>
+            <h3>Carteira digital</h3>
+            <p>Guarde seu dinheiro, pague com o celular por aproximação e faça Pix em segundos, sem tarifa de manutenção.</p>
+          </article>
+          <article class="produto">
+            <span class="produto__icone"><i class="bi bi-credit-card-2-front" aria-hidden="true"></i></span>
+            <h3>Cartão virtual</h3>
+            <p>Controle seus gastos com praticidade e segurança. Recarregue seu cartão quando quiser e use em compras online e presenciais.</p>
+          </article>
+        </div>
       </div>
-    
-    </div>
-  </div>
-  <div class="col">
-    <div class="card border-danger " style="width: 417px ;height: 332px; right: -35px; margin-bottom: 40px; ">
-      
-      <div class="card-body ">
-        <h5 class="card-title" style="text-align: center; font-size: xx-large;">Cartão virtual</h5>
-        <p class="card-text"style="text-align:center;">Controle seus gastos com praticidade e segurança.
-          Recarregue seu cartão quando quiser e utilize-o para compras online e presenciais.</p>
+    </section>
+
+    <section class="secao secao--escura" aria-labelledby="titulo-publicos">
+      <div class="container">
+        <h2 class="secao__titulo" id="titulo-publicos">Uma conta para cada momento</h2>
+        <p class="secao__subtitulo">Escolha a conta que combina com você ou com o seu negócio.</p>
+        <div class="grade grade--3">
+          <article class="publico" id="pessoa-fisica">
+            <h3><i class="bi bi-person" aria-hidden="true"></i> Pessoa física</h3>
+            <p>Conta gratuita com cartão sem anuidade, Pix ilimitado e investimentos a partir de R$ 1.</p>
+            <a href="cadastro.html">Abrir conta pessoal →</a>
+          </article>
+          <article class="publico" id="mei">
+            <h3><i class="bi bi-shop" aria-hidden="true"></i> MEI</h3>
+            <p>Emita boletos, receba por Pix e separe as finanças da sua empresa das pessoais.</p>
+            <a href="cadastro.html">Abrir conta MEI →</a>
+          </article>
+          <article class="publico" id="pessoa-juridica">
+            <h3><i class="bi bi-buildings" aria-hidden="true"></i> Pessoa jurídica</h3>
+            <p>Gestão de pagamentos, folha e crédito para empresas de todos os tamanhos.</p>
+            <a href="cadastro.html">Falar com um especialista →</a>
+          </article>
+        </div>
       </div>
-    
-    </div>
-  </div>
-</div>
+    </section>
 
-<p class=" display-4 text-white bg-dark" style="text-align: center;" >Novidades/ newsletter / blog</p>
-<div class="container">
-  <img src="unsplash_X53e51WfjlE.png" alt="Imagem de pessoas atravessando uma faixa de pedestre">
-  <div class="card-group">
-    <div class="card" style="background-color: #750534;">
-      <img src="Rectangle 54.png" style="width: 100%;" alt="Imagem de pesssoas sorrindo"><br><br><br>
-        <h2>Finanças para jovens</h2>
-        <p>Confira dicas para começar a investir, se planejar para o futuro e como evitar o endividamento.</p>
-    </div>
-    <div class="card" style="background-color: #750534;">
-      <img src="Rectangle 53.png" style="width: 100%;" alt=" Imagem de duas pessoas pessoas conversando e negociando"><br><br><br>
-        <h2>Finanças para aposentados</h2>
-        <p>Veja como planejar sua aposentadoria, dicas para investir seu dinheiro e como se proteger de golpes.</p>
-    </div> 
-</div>
+    <section class="secao secao--escura" aria-label="Nossa proposta">
+      <div class="container grade grade--2">
+        <p class="frase">Seu parceiro para uma vida financeira mais próspera, tranquila e 100% digital.</p>
+        <img class="foto-arredondada" src="img/pagamento.jpg" alt="Pessoa pagando uma compra por aproximação com o celular" width="519" height="655" loading="lazy">
+      </div>
+    </section>
 
-<div class="card-group">
- 
-  <div class="card" style="background-color: #750534;">
-    <img src="Rectangle 52.png" style="width: 100%;" alt="Imagem de uma pessoas escolhendo uma roupa"><br><br><br>
-      <h2>Dicas de empreendedorismo</h2>
-      <p>Confira dicas de como abrir seu próprio negócio, gerenciar suas finanças e como captar investimentos.</p>
-  </div>
-  <div class="card" style="background-color: #750534
-  ;">
-  <img src="Rectangle 51.png" style="width: 100%;" alt="Imagem de uma moeda"><br><br><br>
-      <h2>Notícias do mercado</h2>
-      <p>Confira dicas para começar a investir, se planejar para o futuro e como evitar o endividamento.</p>
-  </div>
- 
-</div>
-</div>
-
-<div class="container">
-  <img style="width: 834px; height: 530px; margin-left: -90px;" src="Group 119.png" alt="card">
-    <img style="margin-left: 50px;" src="Group 120-1.png" alt="Imagem de um pagando sendo feito pelo celular">
-</div>
-
-<br>
-<p class=" display-6 text-white bg-dark" style="text-align: center;" >Agência mais próxima</p>
-<div class="img5" > <img src="Captura de tela 2024-06-01 170053 1.png
-  " alt=" Imagem de um mapa informando a localidade do banco"></div><br>
-
-  <div class="display text-white" style="background: linear-gradient(#D9152C, #750534);">
-    <footer class="py-5 " style="background: linear-gradient(#D9152C, #750534);">
-      <div class="row text-white">
-        <div class="col-6 col-md-2 mb-3 display text-white ">
-          
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Sobre nós</h5>
-          <ul class="nav flex-column display text-white">
-            <li class="nav-item mb-2  "><a href="#" class="nav-link p-0 text-white" ><div class="col-6 col-md-2 mb-3">
-          
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2  "><a href="#" class="nav-link p-0 text-white" >Carreiras</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Imprensa</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sustentabilidade</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Privacidade</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Integridade e ética</a></li>
-          </ul>
-        </div></a></li>
-            
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Explore</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2  "><a href="#" class="nav-link p-0 text-white" >Acessoria de investimento</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Para empresas</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Para o poder público</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Consórcio</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Perguntas frequentes</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2  "><a href="#" class="nav-link p-0 text-white" >Quem pode ter uma conta?</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Como posso fazer saques com a minha conta?</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pacotes e tarifas</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Canais de atendimento</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2  "><a href="#" class="nav-link p-0 text-white" >Tire suas dúvidas e receba suporte 24 horas por dia, 7 dias por semana, pelo chat do nosso aplicativo ou por telefone.</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Inscreva seu imail para receber mais infomações</h5>
-           
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email </label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Inscrever</button>
+    <section class="secao" aria-labelledby="titulo-novidades">
+      <div class="container">
+        <h2 class="secao__titulo" id="titulo-novidades">Novidades e dicas</h2>
+        <p class="secao__subtitulo">Conteúdo para você cuidar melhor do seu dinheiro em cada fase da vida.</p>
+        <div class="grade grade--4">
+          <a class="noticia" href="#">
+            <img src="img/noticia-jovens.jpg" alt="Jovens sorrindo" width="312" height="230" loading="lazy">
+            <div>
+              <h3>Finanças para jovens</h3>
+              <p>Confira dicas para começar a investir, se planejar para o futuro e evitar o endividamento.</p>
             </div>
-          </form>
+          </a>
+          <a class="noticia" href="#">
+            <img src="img/noticia-aposentados.jpg" alt="Duas pessoas conversando sobre negócios" width="312" height="183" loading="lazy">
+            <div>
+              <h3>Finanças para aposentados</h3>
+              <p>Veja como planejar sua aposentadoria, investir seu dinheiro e se proteger de golpes.</p>
+            </div>
+          </a>
+          <a class="noticia" href="#">
+            <img src="img/noticia-empreendedorismo.jpg" alt="Pessoa escolhendo uma roupa numa loja" width="312" height="183" loading="lazy">
+            <div>
+              <h3>Dicas de empreendedorismo</h3>
+              <p>Saiba como abrir seu próprio negócio, gerenciar as finanças e captar investimentos.</p>
+            </div>
+          </a>
+          <a class="noticia" href="#">
+            <img src="img/noticia-mercado.jpg" alt="Moeda" width="312" height="230" loading="lazy">
+            <div>
+              <h3>Notícias do mercado</h3>
+              <p>Acompanhe juros, inflação e o que muda no seu bolso com as decisões da economia.</p>
+            </div>
+          </a>
         </div>
       </div>
-  
-      <div >
-        <p class="text-center text-body-dark "  >© 2024 Company, Banco Tech.In.Fin. All rights reserved.</p>
-        <hr>
-        <p>Redes Socias</p>
-        <ul class="list-unstyled d-flex ">
-          
-          <img src="image 1.png" alt="símbolo do instagram">
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#Youtube"></use></svg></a></li>
-            <img src="image 2.png" alt=" símbolo do Youtube">
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="# Linkedin"></use></svg></a></li>
-            <img src="image 3.png" alt="símbolo do Linkedin">
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#WhatsApp"></use></svg></a></li>
-            <img src="image 4.png" alt="símbolo do WhatsApp">
-        </ul>
-      </div>
-    </footer>
-  </div>
+    </section>
 
+    <section class="secao secao--cinza" aria-labelledby="titulo-agencias">
+      <div class="container grade grade--2">
+        <div>
+          <h2 class="secao__titulo" id="titulo-agencias">Agência mais próxima</h2>
+          <p class="secao__subtitulo">Prefere atendimento presencial? Encontre uma de nossas agências.</p>
+          <ul class="agencias">
+            <li>
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <div><strong>Agência Centro</strong><br><small>Av. Principal, 1000 · Seg. a sex., 10h às 16h</small></div>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <div><strong>Agência Jardim das Flores</strong><br><small>Rua das Acácias, 250 · Seg. a sex., 10h às 16h</small></div>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <div><strong>Agência Shopping Norte</strong><br><small>Piso 2, loja 214 · Seg. a sáb., 10h às 20h</small></div>
+            </li>
+          </ul>
+        </div>
+        <img class="foto-arredondada" src="img/cidade.jpg" alt="Pessoas atravessando uma faixa de pedestres na cidade" width="440" height="1182" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer data-componente="rodape"></footer>
+  <script src="js/layout.js"></script>
 </body>
 </html>
-
-
