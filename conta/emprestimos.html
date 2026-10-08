@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empréstimos · Banco Tech.In.Fin</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-raiz="../" data-area="cliente" data-pagina="emprestimos">
+  <div class="area">
+    <aside data-componente="lateral"></aside>
+
+    <main class="principal" id="conteudo">
+      <header data-componente="barra-topo"></header>
+      <h1 class="titulo-pagina">Formulário de empréstimo</h1>
+
+      <form class="paineis" data-formulario novalidate>
+        <section class="painel" aria-labelledby="titulo-pedido">
+          <h2 id="titulo-pedido">Pedido</h2>
+          <div class="campo">
+            <label for="valor">Valor do empréstimo</label>
+            <input id="valor" name="valor" inputmode="numeric" placeholder="R$ 0,00" required data-moeda data-minimo="100" aria-describedby="minimo-emprestimo">
+            <small id="minimo-emprestimo">Valor mínimo: R$ 100,00.</small>
+            <span class="erro">O valor mínimo é R$ 100,00.</span>
+          </div>
+          <div class="campo">
+            <label for="parcelas">Número de parcelas</label>
+            <select id="parcelas" name="parcelas" required>
+              <option value="">Selecione</option>
+              <option>6</option><option>12</option><option>18</option><option>24</option><option>36</option>
+            </select>
+            <span class="erro">Escolha em quantas parcelas.</span>
+          </div>
+          <div class="assinatura campo" data-assinatura>
+            <label>Assinatura digital</label>
+            <canvas aria-label="Área para assinar com o mouse ou o dedo" tabindex="0"></canvas>
+            <div class="assinatura__acoes">
+              <span>Assine com o mouse ou com o dedo</span>
+              <button type="button" data-limpar-assinatura>Limpar</button>
+            </div>
+            <span class="erro">Assine para confirmar o pedido.</span>
+          </div>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-termos">
+          <h2 id="titulo-termos">Termos de consentimento</h2>
+          <div class="termos">
+            <label class="opcao"><input type="checkbox" name="privacidade" required> Eu aceito os <a href="#">termos de privacidade</a></label>
+            <label class="opcao"><input type="checkbox" name="servicos" required> Eu aceito os <a href="#">termos de contratação de serviços</a></label>
+          </div>
+          <button class="botao botao--vermelho botao--grande botao--bloco" type="submit" style="margin-top: 24px;">Enviar pedido</button>
+          <p class="aviso aviso--sucesso" role="status" hidden data-sucesso="Pedido de empréstimo de {valor} em {parcelas}x enviado para análise."></p>
+        </section>
+      </form>
+    </main>
+  </div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validacao.js"></script>
+  <script src="../js/formularios.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área Pix · Banco Tech.In.Fin</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-raiz="../" data-area="cliente" data-pagina="pix">
+  <div class="area">
+    <aside data-componente="lateral"></aside>
+
+    <main class="principal" id="conteudo">
+      <header data-componente="barra-topo"></header>
+      <h1 class="titulo-pagina">Área Pix</h1>
+
+      <div class="paineis">
+        <section class="painel" aria-label="Ações do Pix">
+          <div class="acoes-pix" role="group" aria-label="Escolha uma ação">
+            <button class="acao-pix" type="button" data-acao="chaves" aria-pressed="false"><i class="bi bi-key" aria-hidden="true"></i>Minhas chaves</button>
+            <button class="acao-pix" type="button" data-acao="pagar" aria-pressed="false"><i class="bi bi-cash-stack" aria-hidden="true"></i>Pagar ou transferir</button>
+            <button class="acao-pix" type="button" data-acao="ler" aria-pressed="false"><i class="bi bi-qr-code-scan" aria-hidden="true"></i>Ler QR Code</button>
+            <button class="acao-pix" type="button" data-acao="receber" aria-pressed="true"><i class="bi bi-qr-code" aria-hidden="true"></i>Receber com QR Code</button>
+          </div>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-movimentacoes">
+          <h2 id="titulo-movimentacoes">Movimentações</h2>
+          <div class="movimento">
+            <strong>Pix · Recebimento</strong><strong>+ R$ 100,00</strong>
+            <small>Fulano de Tal</small><small>02/10/2026 às 12:34</small>
+          </div>
+          <div class="movimento">
+            <strong>Pix · Pagamento</strong><strong>− R$ 250,00</strong>
+            <small>Ciclano da Silva</small><small>30/09/2026 às 16:22</small>
+          </div>
+          <a class="link-acao" href="painel.html#titulo-historico"><i class="bi bi-chevron-right" aria-hidden="true"></i> Ver todas no histórico</a>
+        </section>
+
+        <!-- Receber com QR Code -->
+        <section class="painel painel--largo" data-painel="receber" aria-labelledby="titulo-receber">
+          <h2 id="titulo-receber">Receber com QR Code</h2>
+          <div class="grade grade--2" style="align-items: start;">
+            <div>
+              <div class="campo">
+                <label for="valor-receber">Digite o valor a ser recebido</label>
+                <input id="valor-receber" inputmode="numeric" placeholder="R$ 0,00" data-moeda>
+              </div>
+              <p class="aviso aviso--info"><i class="bi bi-info-circle" aria-hidden="true"></i>
+                Caso não informe o valor, ele será definido por quem pagar o QR Code.</p>
+            </div>
+            <figure style="display: grid; justify-items: center; gap: 8px;">
+              <div class="qrcode" id="qrcode" role="img" aria-label="QR Code para receber o Pix"></div>
+              <figcaption id="legenda-qrcode" style="color: var(--cinza); font-size: 0.875rem; text-align: center;">
+                Valor livre<br><small>QR Code ilustrativo, gerado só para demonstração</small>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Minhas chaves -->
+        <section class="painel painel--largo" data-painel="chaves" aria-labelledby="titulo-chaves" hidden>
+          <h2 id="titulo-chaves">Minhas chaves</h2>
+          <dl class="dados dados--lista">
+            <div><dt>CPF</dt><dd>•••.982.247-•• <button class="botao-icone" type="button" data-copiar="529.982.247-25" aria-label="Copiar chave CPF"><i class="bi bi-copy" aria-hidden="true"></i></button></dd></div>
+            <div><dt>E-mail</dt><dd>ana.souza@email.com <button class="botao-icone" type="button" data-copiar="ana.souza@email.com" aria-label="Copiar chave e-mail"><i class="bi bi-copy" aria-hidden="true"></i></button></dd></div>
+            <div><dt>Chave aleatória</dt><dd>7f3c…a91e <button class="botao-icone" type="button" data-copiar="7f3c2b10-55d4-4c8e-9a0b-1f2e3d4ca91e" aria-label="Copiar chave aleatória"><i class="bi bi-copy" aria-hidden="true"></i></button></dd></div>
+          </dl>
+          <p class="aviso aviso--sucesso" id="aviso-copia" role="status" hidden></p>
+        </section>
+
+        <!-- Pagar ou transferir -->
+        <section class="painel painel--largo" data-painel="pagar" aria-labelledby="titulo-pagar" hidden>
+          <h2 id="titulo-pagar">Pagar ou transferir</h2>
+          <form data-formulario novalidate>
+            <div class="linha-campos">
+              <div class="campo">
+                <label for="chave">Chave Pix de quem vai receber</label>
+                <input id="chave" name="chave" placeholder="CPF, e-mail, telefone ou chave aleatória" required minlength="5">
+                <span class="erro">Informe a chave Pix.</span>
+              </div>
+              <div class="campo">
+                <label for="valor-pagar">Valor</label>
+                <input id="valor-pagar" name="valor" inputmode="numeric" placeholder="R$ 0,00" required data-moeda data-minimo="0.01">
+                <span class="erro">Informe um valor maior que zero.</span>
+              </div>
+            </div>
+            <button class="botao botao--vermelho botao--grande" type="submit">Enviar Pix</button>
+            <p class="aviso aviso--sucesso" role="status" hidden data-sucesso="Pix de {valor} enviado para a chave {chave}."></p>
+          </form>
+        </section>
+
+        <!-- Ler QR Code -->
+        <section class="painel painel--largo" data-painel="ler" aria-labelledby="titulo-ler" hidden>
+          <h2 id="titulo-ler">Ler QR Code</h2>
+          <p>Aponte a câmera do celular para o QR Code no aplicativo do Banco Tech.In.Fin. Neste protótipo para navegador, use <strong>Pagar ou transferir</strong> com a chave Pix.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/validacao.js"></script>
+  <script src="../js/formularios.js"></script>
+  <script src="../js/pix.js"></script>
+</body>
+</html>

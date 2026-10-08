@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel interno · Banco Tech.In.Fin</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-raiz="../" data-area="funcionario" data-pagina="painel">
+  <div class="area">
+    <aside data-componente="lateral"></aside>
+
+    <main class="principal" id="conteudo">
+      <header data-componente="barra-topo"></header>
+      <h1 class="titulo-pagina">Painel interno</h1>
+
+      <div class="paineis">
+        <section class="painel" id="contas-correntes" aria-labelledby="titulo-cc">
+          <h2 id="titulo-cc">Contas correntes</h2>
+          <dl class="dados dados--lista">
+            <div><dt>Número total de contas</dt><dd>1.200.000</dd></div>
+            <div><dt>Novas contas abertas no mês</dt><dd>25.000</dd></div>
+            <div><dt>Saldo médio por conta</dt><dd>R$ 5.000,00</dd></div>
+            <div><dt>Custo médio por conta</dt><dd>R$ 10,00</dd></div>
+            <div><dt>Rentabilidade média por conta</dt><dd>R$ 20,00</dd></div>
+            <div><dt>Índice de inadimplência</dt><dd>1,5%</dd></div>
+          </dl>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-distribuicao">
+          <h2 id="titulo-distribuicao">Distribuição da carteira</h2>
+          <div class="pizza">
+            <div class="pizza__circulo" role="img" aria-label="Contas correntes 42,7%, poupança 28,5%, cartões de crédito 17,8% e investimentos 11%"></div>
+            <ul class="legenda">
+              <li><i style="background: #22d3ee;"></i> Contas correntes · 42,7%</li>
+              <li><i style="background: #6d28d9;"></i> Poupança · 28,5%</li>
+              <li><i style="background: #2b8fc2;"></i> Cartões de crédito · 17,8%</li>
+              <li><i style="background: #1e3a8a;"></i> Investimentos · 11%</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-rentabilidade">
+          <h2 id="titulo-rentabilidade">Rentabilidade total por tipo de conta</h2>
+          <div class="barras-horizontais">
+            <div><span>Contas correntes</span><span class="barra" style="--valor: 48%"></span><strong>R$ 24 mi</strong></div>
+            <div><span>Poupança</span><span class="barra" style="--valor: 24%"></span><strong>R$ 12 mi</strong></div>
+            <div><span>Cartão de crédito</span><span class="barra" style="--valor: 25%"></span><strong>R$ 12,5 mi</strong></div>
+            <div><span><strong>Total</strong></span><span class="barra" style="--valor: 97%"></span><strong>R$ 48,5 mi</strong></div>
+          </div>
+        </section>
+
+        <section class="painel" id="investimentos" aria-labelledby="titulo-inv">
+          <h2 id="titulo-inv">Investimentos</h2>
+          <dl class="dados dados--lista">
+            <div><dt>Saldo total investido</dt><dd>R$ 20 bilhões</dd></div>
+            <div><dt>Novos investimentos no mês</dt><dd>R$ 1 bilhão</dd></div>
+            <div><dt>Rentabilidade média</dt><dd>12% ao ano</dd></div>
+            <div><dt>Custo médio por investimento</dt><dd>0,50% ao ano</dd></div>
+          </dl>
+        </section>
+
+        <section class="painel" id="poupanca" aria-labelledby="titulo-poupanca">
+          <h2 id="titulo-poupanca">Poupança</h2>
+          <dl class="dados dados--lista">
+            <div><dt>Número total de contas</dt><dd>800.000</dd></div>
+            <div><dt>Novas contas abertas no mês</dt><dd>15.000</dd></div>
+            <div><dt>Saldo médio por conta</dt><dd>R$ 10.000,00</dd></div>
+            <div><dt>Custo médio por conta</dt><dd>R$ 5,00</dd></div>
+            <div><dt>Rentabilidade média por conta</dt><dd>R$ 15,00</dd></div>
+            <div><dt>Índice de inadimplência</dt><dd>0,5%</dd></div>
+          </dl>
+        </section>
+
+        <section class="painel" id="cartoes" aria-labelledby="titulo-cartoes">
+          <h2 id="titulo-cartoes">Cartões de crédito</h2>
+          <dl class="dados dados--lista">
+            <div><dt>Número total de cartões</dt><dd>500.000</dd></div>
+            <div><dt>Novos cartões emitidos no mês</dt><dd>10.000</dd></div>
+            <div><dt>Ticket médio de compra</dt><dd>R$ 300,00</dd></div>
+            <div><dt>Custo médio por cartão</dt><dd>R$ 15,00</dd></div>
+            <div><dt>Rentabilidade média por cartão</dt><dd>R$ 25,00</dd></div>
+            <div><dt>Índice de inadimplência</dt><dd>3,0%</dd></div>
+          </dl>
+        </section>
+
+        <section class="painel painel--largo" aria-labelledby="titulo-mensal">
+          <h2 id="titulo-mensal">Novas contas por mês</h2>
+          <div class="grafico-barras" role="img" aria-label="Novas contas abertas por mês, com pico em abril e em setembro">
+            <div><span style="--valor: 62%"></span><small>Jan</small></div>
+            <div><span style="--valor: 46%"></span><small>Fev</small></div>
+            <div><span style="--valor: 76%"></span><small>Mar</small></div>
+            <div><span style="--valor: 96%"></span><small>Abr</small></div>
+            <div><span style="--valor: 24%"></span><small>Mai</small></div>
+            <div><span style="--valor: 46%"></span><small>Jun</small></div>
+            <div><span style="--valor: 52%"></span><small>Jul</small></div>
+            <div><span style="--valor: 32%"></span><small>Ago</small></div>
+            <div><span style="--valor: 82%"></span><small>Set</small></div>
+            <div><span style="--valor: 14%"></span><small>Out</small></div>
+            <div><span style="--valor: 62%"></span><small>Nov</small></div>
+            <div><span style="--valor: 53%"></span><small>Dez</small></div>
+          </div>
+        </section>
+
+        <section class="painel painel--largo" id="mais-informacoes" aria-labelledby="titulo-mais">
+          <h2 id="titulo-mais">Mais informações</h2>
+          <dl class="dados">
+            <div><dt>Lucro líquido no mês</dt><dd>R$ 100 milhões</dd></div>
+            <div><dt>Retorno sobre o patrimônio (ROE)</dt><dd>20%</dd></div>
+            <div><dt>Índice de eficiência</dt><dd>65%</dd></div>
+            <div><dt>Satisfação do cliente</dt><dd>85%</dd></div>
+            <div><dt>Número de funcionários</dt><dd>10.000</dd></div>
+          </dl>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/layout.js"></script>
+</body>
+</html>
